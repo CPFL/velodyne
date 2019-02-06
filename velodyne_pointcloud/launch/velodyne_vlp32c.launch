@@ -8,7 +8,7 @@
   <arg name="device_ip" default="" />
   <arg name="frame_id" default="velodyne" />
   <arg name="manager" default="$(arg frame_id)_nodelet_manager" />
-  <arg name="max_range" default="130.0" />
+  <arg name="max_range" default="200.0" />
   <arg name="min_range" default="0.4" />
   <arg name="pcap" default="" />
   <arg name="port" default="2368" />
@@ -40,7 +40,7 @@
     <arg name="manager" value="$(arg manager)" />
     <arg name="max_range" value="$(arg max_range)"/>
     <arg name="min_range" value="$(arg min_range)"/>
-    <remap from="velodyne_points" to="$(arg topic_name)"/>
+    <arg name="topic_name" value="$(arg topic_name)"/>
   </include>
 
   <!-- start laserscan nodelet -->
